@@ -1,0 +1,12 @@
+ <section class="jumbotron text-center">
+        <div class="container">
+        	<h1>Potin n°<%= @id %> !</h1>
+        	<h4>Titre du potin : <%= @potin_title %></h4>
+        	<h4>Auteur du potin : <a href='/user/<%= @potin_user_id %>'><%= @potin_author_first_name %> <%= @potin_author_last_name %></a></h4>
+        	<p>Contenu du potin : <%= @potin_content %></p>
+			<a href='/potin/<%= @id %>/edit' class="btn btn-primary">Editer ce potin</a>
+			<a href='/potin/<%= @id %>' class="btn btn-danger" data-confirm="Etes-vous sûrs de supprimer ce Potin ?!" 
+			data-method="DELETE">Supprimer le potin </a>
+			
+        </div>
+</section>

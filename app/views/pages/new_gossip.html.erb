@@ -1,0 +1,23 @@
+<section class="jumbotron text-center">
+	<div class="container">
+
+		<h1>Créer ton petit potin</h1>
+
+		<form action="new_gossip" method="POST">
+			<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+			
+			<div class="form-group">
+				<label for="first_name">Titre du potin</label>
+				<input type="text" class="form-control" id="first_name" name="title">
+			</div>
+
+			<div class="form-group">
+				<label for="content">Votre potin ici</label>
+				<textarea class="form-control" id="content" name="content" rows="2"></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Envoyer</button>
+		</form>
+
+	</div>
+</section>
