@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post '/user', to: 'users#create'
 
   resources :sessions, only: [:new, :create, :destroy]
+  
 
   get '/sessions/profile', to: 'sessions#profile'
 
