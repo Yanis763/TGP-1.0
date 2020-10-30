@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-
+      
   end
 
   def create
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     # redirige où tu veux, avec un flash ou pas
     flash.now[:notice] = 'You are connected'
-    
+    redirect_to root_path
   else
     flash.now[:danger] = 'Invalid email/password combination'
     render 'new'

@@ -1,35 +1,17 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+<div class="container-fluid m-4 p-4">
+  <h1>Se connecter</h1><br>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+  <%= label_tag 'email ' %><br />
+  <%= text_field_tag 'email' %>
+  <br /> <br />
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+  <%= label_tag 'Password ' %><br />
+  <%= password_field_tag 'password'%>
+  <br /> <br />
 
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-  </head>
-<body class="text-center">
-    <form class="form-signin">
-      <h1 class="mb-3 font-weight-normal">Veuillez vous connecter</h1>
-      <label for="email" class="sr-only">Adresse email</label>
-      <input type="email" id="email" class="form-control" placeholder="Adresse email" required="" autofocus="">
-      <label for="password" class="sr-only">Mot de passe</label>
-      <input type="password" id="password" class="form-control" placeholder="Mot de passe" required="">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me">Se souvenir de moi
-        </label>
-      </div>
-      <a href= "/" class="btn btn-lg btn-primary btn-block" type="submit">Connectez-vous</a>
-      <p class="mt-5 mb-3 text-muted">© 2020</p>
-    </form>
-  
+  <%= submit_tag "Se connecter" %>
 
-</body>
+  <% end %>
+</div>
