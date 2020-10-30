@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
+  
   root to: 'pages#accueil'
   
   get '/team', to: 'pages#team'
@@ -18,7 +16,12 @@ Rails.application.routes.draw do
   
   get '/user/:id', to: 'users#user'
 
-  
+  get '/user', to: 'users#new' 
+
+  post '/user', to: 'users#create'
+
   resources :sessions, only: [:new, :create, :destroy]
+
+  get '/sessions/profile', to: 'sessions#profile'
 
 end

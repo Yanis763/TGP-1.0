@@ -8,4 +8,21 @@ class UsersController < ApplicationController
   	@user_age = @user.age
   	@user_description = @user.description
   end
+
+  def new
+	
+  end
+
+  def create
+	@user = User.new
+	@user.email = params[:email]
+	@user.password = params[:password]
+	
+	if
+		@user.save
+		redirect_to root_path
+	else
+		redirect_to user_path
+	end
+  end
 end
